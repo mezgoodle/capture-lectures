@@ -7,8 +7,8 @@ from datetime import date
 
 TODAY = date.today()
 DATE_FORMAT = TODAY.strftime("%d-%m-%Y")
-REGION = (372, 84, 818, 254)
-SLEEP_SECONDS = 2
+REGION = (174, 222, 1113-174, 926-222)
+SLEEP_SECONDS = 5
 SUBJECT_NAME = 'Economics'
 counter = 0
 
@@ -22,7 +22,7 @@ while True:
 		difference = cv2.subtract(previous, current)
 		b, g, r = cv2.split(difference)
 		if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
-			pass
+			print('Skipped')
 		else:
 			counter += 1
 			print('New photo')
