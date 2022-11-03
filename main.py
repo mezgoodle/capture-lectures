@@ -7,9 +7,9 @@ from datetime import date
 
 TODAY = date.today()
 DATE_FORMAT = TODAY.strftime("%d-%m-%Y")
-REGION = (174, 222, 1113-174, 926-222)
+REGION = (178, 149, 1742-178, 961-149)
 SLEEP_SECONDS = 5
-SUBJECT_NAME = 'Economics'
+SUBJECT_NAME = 'Unity'
 counter = 0
 
 while True:
@@ -24,6 +24,7 @@ while True:
 		if cv2.countNonZero(b) == 0 and cv2.countNonZero(g) == 0 and cv2.countNonZero(r) == 0:
 			print('Skipped')
 		else:
+			print(cv2.countNonZero(b), cv2.countNonZero(g), cv2.countNonZero(r))
 			counter += 1
 			print('New photo')
 			screenshot_name = f'{SUBJECT_NAME}_{DATE_FORMAT}_{counter}.png'
