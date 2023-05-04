@@ -1,16 +1,16 @@
-import pyautogui
-import cv2
-import numpy as np
-
 import time
 from datetime import date
 
+import cv2
+import numpy as np
+import pyautogui
+
 TODAY = date.today()
 DATE_FORMAT = TODAY.strftime("%d-%m-%Y")
-REGION = (178, 149, 1742-178, 961-149)
+REGION = (241, 52, 1678-241, 1011-52)
 SLEEP_SECONDS = 5
-SUBJECT_NAME = 'Unity'
-counter = 0
+SUBJECT_NAME = 'ML'
+counter = 46
 
 while True:
 	time.sleep(SLEEP_SECONDS)
